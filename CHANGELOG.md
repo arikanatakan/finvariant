@@ -23,5 +23,6 @@ First release.
 - `AuditReport` - `ok`, per-rule findings (expected vs actual, difference,
   severity), counts, `summary()` and a JSON-safe `to_dict()` with provenance.
 - Configurable absolute and relative tolerances for rounded statements.
-- Validation suite: a hand-built consistent model, Apple's real FY2024
-  statements, and one isolated breakage per invariant.
+- Validation suite: a hand-built consistent model, the real published
+  statements of Apple (FY2024), Tesla (FY2024) and NVIDIA (FY2025), and one
+  isolated breakage per invariant.
