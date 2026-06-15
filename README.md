@@ -133,6 +133,33 @@ Out of scope: retrieving statements (see financetoolkit, the SEC tools),
 building or forecasting models, ratio analysis, consolidation and currency
 translation.
 
+## References
+
+### Data sources
+
+The real statements in the validation suite are the companies' own figures as
+reported in their U.S. SEC Form 10-K filings. They were compiled from the public
+filings and cross-checked for internal consistency (footing and the accounting
+equation). All filings are on [SEC EDGAR](https://www.sec.gov/edgar).
+
+| Company | Filing | Fiscal year ended |
+|---------|--------|-------------------|
+| Apple Inc. | Form 10-K | September 28, 2024 |
+| Tesla, Inc. | Form 10-K | December 31, 2024 |
+| NVIDIA Corporation | Form 10-K | January 26, 2025 |
+| Microsoft Corporation | Form 10-K | June 30, 2024 and June 30, 2023 |
+| Amazon.com, Inc. | Form 10-K | December 31, 2024 |
+| Meta Platforms, Inc. | Form 10-K | December 31, 2024 |
+
+### Method
+
+The checks are the standard accounting identities: the accounting equation
+(assets = liabilities + equity), the footing of subtotals, the cash-flow
+identity (net change = operating + investing + financing) and the articulation
+of the three statements (net income and retained earnings linking the income
+statement, balance sheet and cash flow). These follow the conceptual frameworks
+of the FASB and IASB and standard financial-accounting texts.
+
 ## License
 
 MIT. Written and maintained by [Atakan Arikan](https://github.com/arikanatakan),
