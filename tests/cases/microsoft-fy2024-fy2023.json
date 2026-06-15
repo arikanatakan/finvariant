@@ -1,0 +1,37 @@
+{
+  "id": "microsoft-fy2024-fy2023",
+  "description": "Microsoft FY2024 and FY2023 (USD millions, fiscal year ended June 30). A multi-period series: the income statement chain and the accounting equation are verified independently for each year. Retained earnings are intentionally omitted: Microsoft charges part of its large share buybacks to retained earnings, so the simple roll-forward (retained earnings = prior + net income - dividends) does not hold for it. finvariant's v0.1 roll-forward does not yet model buybacks (planned for v0.2), so to avoid a false positive this case supplies balance-sheet subtotals without the retained-earnings line.",
+  "source": "Microsoft Corporation Form 10-K, fiscal years ended June 30, 2024 and June 30, 2023.",
+  "periods": ["FY2023", "FY2024"],
+  "income_statement": {
+    "FY2023": {
+      "revenue": 211915, "cogs": 65863, "gross_profit": 146052,
+      "operating_expenses": 57529, "operating_income": 88523,
+      "other_income": 788, "pretax_income": 89311, "tax": 16950,
+      "net_income": 72361
+    },
+    "FY2024": {
+      "revenue": 245122, "cogs": 74114, "gross_profit": 171008,
+      "operating_expenses": 61575, "operating_income": 109433,
+      "interest_expense": 1646, "pretax_income": 107787, "tax": 19651,
+      "net_income": 88136
+    }
+  },
+  "balance_sheet": {
+    "FY2023": {
+      "total_current_assets": 184257, "total_non_current_assets": 227719,
+      "total_assets": 411976, "total_current_liabilities": 104149,
+      "total_non_current_liabilities": 101604, "total_liabilities": 205753,
+      "total_equity": 206223
+    },
+    "FY2024": {
+      "total_current_assets": 159734, "total_non_current_assets": 352429,
+      "total_assets": 512163, "total_current_liabilities": 125286,
+      "total_non_current_liabilities": 118400, "total_liabilities": 243686,
+      "total_equity": 268477
+    }
+  },
+  "cash_flow": {},
+  "expect_ok": true,
+  "expect_failed_rules": []
+}

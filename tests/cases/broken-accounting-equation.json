@@ -1,0 +1,13 @@
+{
+  "id": "broken-accounting-equation",
+  "description": "Assets do not equal liabilities plus equity. Only EQ.accounting_equation fires.",
+  "source": "Hand-built negative case.",
+  "periods": ["FY2024"],
+  "income_statement": {},
+  "balance_sheet": {
+    "FY2024": {"total_assets": 540, "total_liabilities": 158, "total_equity": 380}
+  },
+  "cash_flow": {},
+  "expect_ok": false,
+  "expect_failed_rules": ["EQ.accounting_equation"]
+}

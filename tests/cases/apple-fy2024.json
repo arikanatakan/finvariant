@@ -1,0 +1,34 @@
+{
+  "id": "apple-fy2024",
+  "description": "Apple Inc. FY2024 income statement and balance sheet (USD millions). Real published statements articulate, so finvariant passes them. Note the negative retained earnings: cumulative buybacks and dividends exceed cumulative earnings, which the engine handles without trouble.",
+  "source": "Apple Inc. Form 10-K, fiscal year ended September 28, 2024.",
+  "periods": ["FY2024"],
+  "income_statement": {
+    "FY2024": {
+      "revenue": 391035, "cogs": 210352, "gross_profit": 180683,
+      "operating_expenses": 57467, "operating_income": 123216,
+      "other_income": 269, "pretax_income": 123485, "tax": 29749,
+      "net_income": 93736
+    }
+  },
+  "balance_sheet": {
+    "FY2024": {
+      "cash": 29943, "short_term_investments": 35228,
+      "accounts_receivable": 33410, "inventory": 7286,
+      "other_current_assets": 47120, "total_current_assets": 152987,
+      "long_term_investments": 91479, "ppe_net": 45680,
+      "other_non_current_assets": 74834, "total_non_current_assets": 211993,
+      "total_assets": 364980,
+      "accounts_payable": 68960, "short_term_debt": 9967,
+      "current_portion_long_term_debt": 10912, "deferred_revenue": 8249,
+      "other_current_liabilities": 78304, "total_current_liabilities": 176392,
+      "long_term_debt": 85750, "other_non_current_liabilities": 45888,
+      "total_non_current_liabilities": 131638, "total_liabilities": 308030,
+      "common_stock": 83276, "retained_earnings": -19154,
+      "accumulated_oci": -7172, "total_equity": 56950
+    }
+  },
+  "cash_flow": {},
+  "expect_ok": true,
+  "expect_failed_rules": []
+}

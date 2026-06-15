@@ -1,0 +1,14 @@
+{
+  "id": "broken-retained-earnings",
+  "description": "Retained earnings do not roll forward by net income less dividends. Only ART.retained_earnings fires.",
+  "source": "Hand-built negative case.",
+  "periods": ["FY2023", "FY2024"],
+  "income_statement": {"FY2024": {"net_income": 100}},
+  "balance_sheet": {
+    "FY2023": {"retained_earnings": 220},
+    "FY2024": {"retained_earnings": 300}
+  },
+  "cash_flow": {"FY2024": {"dividends_paid": -40}},
+  "expect_ok": false,
+  "expect_failed_rules": ["ART.retained_earnings"]
+}

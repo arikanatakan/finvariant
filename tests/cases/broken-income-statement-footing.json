@@ -1,0 +1,11 @@
+{
+  "id": "broken-income-statement-footing",
+  "description": "Gross profit does not equal revenue minus cogs. Only FOOT.is.gross_profit fires.",
+  "source": "Hand-built negative case.",
+  "periods": ["FY2024"],
+  "income_statement": {"FY2024": {"revenue": 1000, "cogs": 600, "gross_profit": 390}},
+  "balance_sheet": {},
+  "cash_flow": {},
+  "expect_ok": false,
+  "expect_failed_rules": ["FOOT.is.gross_profit"]
+}

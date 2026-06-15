@@ -1,0 +1,30 @@
+{
+  "id": "meta-fy2024",
+  "description": "Meta Platforms FY2024 supplied at the subtotal level only, no individual line items (USD millions). The skip behaviour: the accounting equation and the total-level footing are verified, while each section's footing is reported as skipped (not failed) because its line items were not provided.",
+  "source": "Meta Platforms, Inc. Form 10-K, fiscal year ended December 31, 2024.",
+  "periods": ["FY2024"],
+  "income_statement": {
+    "FY2024": {
+      "revenue": 164501, "cogs": 30161, "gross_profit": 134340,
+      "operating_expenses": 64960, "operating_income": 69380,
+      "other_income": 1283, "pretax_income": 70663, "tax": 8303,
+      "net_income": 62360
+    }
+  },
+  "balance_sheet": {
+    "FY2024": {
+      "total_current_assets": 100045, "total_non_current_assets": 176009,
+      "total_assets": 276054, "total_current_liabilities": 33596,
+      "total_non_current_liabilities": 59821, "total_liabilities": 93417,
+      "total_equity": 182637
+    }
+  },
+  "cash_flow": {},
+  "expect_ok": true,
+  "expect_failed_rules": [],
+  "expect_skipped_rules": [
+    "FOOT.bs.total_current_assets", "FOOT.bs.total_non_current_assets",
+    "FOOT.bs.total_current_liabilities", "FOOT.bs.total_non_current_liabilities",
+    "FOOT.bs.total_equity"
+  ]
+}

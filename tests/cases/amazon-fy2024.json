@@ -1,0 +1,33 @@
+{
+  "id": "amazon-fy2024",
+  "description": "Amazon FY2024 with every balance-sheet line item supplied (USD millions). Footing at full depth: each subtotal (current and non-current assets, current and non-current liabilities, and equity, including negative treasury stock and accumulated other comprehensive loss) is verified to equal the sum of its parts.",
+  "source": "Amazon.com, Inc. Form 10-K, fiscal year ended December 31, 2024.",
+  "periods": ["FY2024"],
+  "income_statement": {
+    "FY2024": {
+      "revenue": 637959, "cogs": 326288, "gross_profit": 311671,
+      "operating_expenses": 243078, "operating_income": 68593,
+      "other_income": 21, "pretax_income": 68614, "tax": 9265,
+      "net_income": 59349
+    }
+  },
+  "balance_sheet": {
+    "FY2024": {
+      "cash": 78779, "short_term_investments": 22423,
+      "accounts_receivable": 55451, "inventory": 34214,
+      "total_current_assets": 190867,
+      "ppe_net": 328806, "goodwill": 23074, "other_non_current_assets": 82147,
+      "total_non_current_assets": 434027, "total_assets": 624894,
+      "accounts_payable": 94363, "other_current_liabilities": 66965,
+      "deferred_revenue": 18103, "total_current_liabilities": 179431,
+      "long_term_debt": 52623, "other_non_current_liabilities": 106870,
+      "total_non_current_liabilities": 159493, "total_liabilities": 338924,
+      "common_stock": 111, "treasury_stock": -7837,
+      "additional_paid_in_capital": 120864, "accumulated_oci": -34,
+      "retained_earnings": 172866, "total_equity": 285970
+    }
+  },
+  "cash_flow": {},
+  "expect_ok": true,
+  "expect_failed_rules": []
+}

@@ -1,0 +1,32 @@
+{
+  "id": "nvidia-fy2025",
+  "description": "NVIDIA Corporation FY2025 income statement and balance sheet (USD millions). Real published statements articulate, so finvariant passes them.",
+  "source": "NVIDIA Corporation Form 10-K, fiscal year ended January 26, 2025.",
+  "periods": ["FY2025"],
+  "income_statement": {
+    "FY2025": {
+      "revenue": 130497, "cogs": 32639, "gross_profit": 97858,
+      "operating_expenses": 16405, "operating_income": 81453,
+      "other_income": 2573, "pretax_income": 84026, "tax": 11146,
+      "net_income": 72880
+    }
+  },
+  "balance_sheet": {
+    "FY2025": {
+      "cash": 8589, "short_term_investments": 34621,
+      "accounts_receivable": 23065, "inventory": 10080,
+      "other_current_assets": 3771, "total_current_assets": 80126,
+      "ppe_net": 8076, "other_non_current_assets": 23399,
+      "total_non_current_assets": 31475, "total_assets": 111601,
+      "accounts_payable": 6310, "other_current_liabilities": 11737,
+      "total_current_liabilities": 18047, "long_term_debt": 8463,
+      "other_non_current_liabilities": 5764,
+      "total_non_current_liabilities": 14227, "total_liabilities": 32274,
+      "common_stock": 24, "additional_paid_in_capital": 11237,
+      "retained_earnings": 68038, "other_equity": 28, "total_equity": 79327
+    }
+  },
+  "cash_flow": {},
+  "expect_ok": true,
+  "expect_failed_rules": []
+}

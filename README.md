@@ -109,6 +109,18 @@ Version 0.1.0. Single entity, single currency, one or more periods, in a
 canonical schema. The `Statements` input and `AuditReport` output are the
 contract and are append-only from here.
 
+## Known limitations
+
+The retained-earnings roll-forward checks `retained earnings = prior + net
+income - dividends`. It does not yet model share buybacks charged to retained
+earnings, which several large companies do (Microsoft, for example). For those,
+supply the balance sheet without the retained-earnings line so the roll-forward
+is skipped rather than falsely failed; a full equity roll-forward is planned for
+0.2.
+
+Footing compares a subtotal to the line items you supply, so give a section's
+items in full or not at all: a partial section is reported as not footing.
+
 ## Roadmap
 
 | Version | Scope |

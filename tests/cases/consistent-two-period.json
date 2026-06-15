@@ -1,0 +1,46 @@
+{
+  "id": "consistent-two-period",
+  "description": "A hand-built two-period model where every invariant holds. Exercises the full engine: footing, the accounting equation, cash-flow tie-outs, net-income agreement and the retained-earnings roll-forward.",
+  "source": "Hand-built from the accounting identities.",
+  "periods": ["FY2023", "FY2024"],
+  "income_statement": {
+    "FY2024": {
+      "revenue": 1000, "cogs": 600, "gross_profit": 400,
+      "operating_expenses": 250, "operating_income": 150,
+      "interest_expense": 20, "pretax_income": 130, "tax": 30,
+      "net_income": 100, "depreciation_amortization": 50
+    }
+  },
+  "balance_sheet": {
+    "FY2023": {
+      "cash": 50, "accounts_receivable": 60, "inventory": 40,
+      "total_current_assets": 150, "ppe_net": 300,
+      "total_non_current_assets": 300, "total_assets": 450,
+      "accounts_payable": 30, "total_current_liabilities": 30,
+      "long_term_debt": 100, "total_non_current_liabilities": 100,
+      "total_liabilities": 130, "common_stock": 100,
+      "retained_earnings": 220, "total_equity": 320
+    },
+    "FY2024": {
+      "cash": 93, "accounts_receivable": 70, "inventory": 45,
+      "total_current_assets": 208, "ppe_net": 330,
+      "total_non_current_assets": 330, "total_assets": 538,
+      "accounts_payable": 38, "total_current_liabilities": 38,
+      "long_term_debt": 120, "total_non_current_liabilities": 120,
+      "total_liabilities": 158, "common_stock": 100,
+      "retained_earnings": 280, "total_equity": 380
+    }
+  },
+  "cash_flow": {
+    "FY2024": {
+      "net_income": 100, "depreciation_amortization": 50,
+      "change_in_accounts_receivable": -10, "change_in_inventory": -5,
+      "change_in_accounts_payable": 8, "cfo": 143,
+      "capex": -80, "cfi": -80,
+      "debt_issued": 20, "dividends_paid": -40, "cff": -20,
+      "net_change_in_cash": 43, "beginning_cash": 50, "ending_cash": 93
+    }
+  },
+  "expect_ok": true,
+  "expect_failed_rules": []
+}

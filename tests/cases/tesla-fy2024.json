@@ -1,0 +1,32 @@
+{
+  "id": "tesla-fy2024",
+  "description": "Tesla, Inc. FY2024 income statement and balance sheet (USD millions). Real published statements articulate, so finvariant passes them. Line items plus residual 'other' buckets, so every section foots.",
+  "source": "Tesla, Inc. Form 10-K, fiscal year ended December 31, 2024.",
+  "periods": ["FY2024"],
+  "income_statement": {
+    "FY2024": {
+      "revenue": 97690, "cogs": 80240, "gross_profit": 17450,
+      "operating_expenses": 10374, "operating_income": 7076,
+      "other_income": 1914, "pretax_income": 8990, "tax": 1837,
+      "net_income": 7153
+    }
+  },
+  "balance_sheet": {
+    "FY2024": {
+      "cash": 16139, "short_term_investments": 20424,
+      "accounts_receivable": 4418, "inventory": 12017,
+      "other_current_assets": 5362, "total_current_assets": 58360,
+      "ppe_net": 51501, "other_non_current_assets": 12209,
+      "total_non_current_assets": 63710, "total_assets": 122070,
+      "accounts_payable": 12474, "other_current_liabilities": 16347,
+      "total_current_liabilities": 28821, "long_term_debt": 5757,
+      "other_non_current_liabilities": 13812,
+      "total_non_current_liabilities": 19569, "total_liabilities": 48390,
+      "common_stock": 3, "additional_paid_in_capital": 38371,
+      "retained_earnings": 35209, "other_equity": 97, "total_equity": 73680
+    }
+  },
+  "cash_flow": {},
+  "expect_ok": true,
+  "expect_failed_rules": []
+}

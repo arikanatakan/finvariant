@@ -1,0 +1,11 @@
+{
+  "id": "broken-operating-cash-flow-footing",
+  "description": "Operating cash flow does not equal the sum of its line items. Only FOOT.cf.cfo fires.",
+  "source": "Hand-built negative case.",
+  "periods": ["FY2024"],
+  "income_statement": {},
+  "balance_sheet": {},
+  "cash_flow": {"FY2024": {"net_income": 100, "depreciation_amortization": 50, "cfo": 140}},
+  "expect_ok": false,
+  "expect_failed_rules": ["FOOT.cf.cfo"]
+}

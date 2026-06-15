@@ -1,0 +1,11 @@
+{
+  "id": "broken-cash-flow-net-change",
+  "description": "Net change in cash does not equal cfo + cfi + cff. Only FOOT.cf.net_change fires.",
+  "source": "Hand-built negative case.",
+  "periods": ["FY2024"],
+  "income_statement": {},
+  "balance_sheet": {},
+  "cash_flow": {"FY2024": {"cfo": 143, "cfi": -80, "cff": -20, "net_change_in_cash": 50}},
+  "expect_ok": false,
+  "expect_failed_rules": ["FOOT.cf.net_change"]
+}

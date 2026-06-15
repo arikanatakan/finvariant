@@ -1,0 +1,11 @@
+{
+  "id": "broken-cash-ending-tie",
+  "description": "Cash flow ending cash does not match the balance sheet cash. Only CASH.ending_ties fires.",
+  "source": "Hand-built negative case.",
+  "periods": ["FY2024"],
+  "income_statement": {},
+  "balance_sheet": {"FY2024": {"cash": 90}},
+  "cash_flow": {"FY2024": {"ending_cash": 93}},
+  "expect_ok": false,
+  "expect_failed_rules": ["CASH.ending_ties"]
+}
