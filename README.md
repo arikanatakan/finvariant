@@ -12,6 +12,8 @@ the balance sheet, subtotals foot, and the three statements articulate - and
 returns a structured, auditable report. It verifies; it does not parse, fetch
 or build statements.
 
+![finvariant framework: statements in the canonical schema flow through check(), which verifies the accounting invariants (footing, the accounting equation, cash-flow tie-outs, articulation) and returns an AuditReport with a verdict, findings and provenance](assets/framework.png)
+
 ## Motivation
 
 Python has plenty of libraries to *retrieve* statements (financetoolkit, the SEC
