@@ -64,9 +64,8 @@ print(r.summary())
 
 Real statements tie out. Apple FY2024 from the 10-K is shown below. The
 validation suite checks six real companies (Apple, Tesla, NVIDIA, Microsoft,
-Amazon, Meta), each from a different angle: full line-item footing, a
-multi-period series, and subtotal-only data where section footing is skipped
-rather than failed.
+Amazon, Meta), ranging from full line-item footing to subtotal-only data, where
+a check whose inputs are missing is skipped rather than failed.
 
 ```python
 s = fv.Statements(

@@ -1,0 +1,32 @@
+{
+  "id": "microsoft-fy2024",
+  "description": "Microsoft FY2024 (USD millions, fiscal year ended June 30). Real balance-sheet line items with equity at the total level: Microsoft charges part of its share buybacks to retained earnings, so (per the README's note) the retained-earnings line is omitted; a full equity roll-forward is a v0.2 feature.",
+  "source": "Microsoft Corporation Form 10-K, fiscal year ended June 30, 2024.",
+  "periods": ["FY2024"],
+  "income_statement": {
+    "FY2024": {
+      "revenue": 245122, "cogs": 74114, "gross_profit": 171008,
+      "operating_expenses": 61575, "operating_income": 109433,
+      "interest_expense": 1646, "pretax_income": 107787, "tax": 19651,
+      "net_income": 88136
+    }
+  },
+  "balance_sheet": {
+    "FY2024": {
+      "cash": 18315, "short_term_investments": 57228,
+      "accounts_receivable": 56924, "inventory": 1246,
+      "other_current_assets": 26021, "total_current_assets": 159734,
+      "ppe_net": 154552, "goodwill": 119220, "intangible_assets": 27597,
+      "other_non_current_assets": 51060, "total_non_current_assets": 352429,
+      "total_assets": 512163,
+      "accounts_payable": 21996, "current_portion_long_term_debt": 2249,
+      "other_current_liabilities": 101041, "total_current_liabilities": 125286,
+      "long_term_debt": 42688, "other_non_current_liabilities": 75712,
+      "total_non_current_liabilities": 118400, "total_liabilities": 243686,
+      "total_equity": 268477
+    }
+  },
+  "cash_flow": {},
+  "expect_ok": true,
+  "expect_failed_rules": []
+}
