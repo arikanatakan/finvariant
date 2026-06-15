@@ -1,7 +1,7 @@
 # finvariant
 
 [![CI](https://github.com/arikanatakan/finvariant/actions/workflows/ci.yml/badge.svg)](https://github.com/arikanatakan/finvariant/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/finvariant)](https://pypi.org/project/finvariant/)
+[![PyPI](https://img.shields.io/pypi/v/finvariant?v=2)](https://pypi.org/project/finvariant/)
 [![License: MIT](https://img.shields.io/github/license/arikanatakan/finvariant)](LICENSE)
 
 Deterministic integrity checks for financial statements.
