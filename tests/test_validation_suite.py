@@ -28,3 +28,6 @@ def test_case(case):
     assert report.ok is case["expect_ok"]
     failed = {o.rule_id for o in report.findings}
     assert failed == set(case["expect_failed_rules"])
+    skipped = {o.rule_id for o in report.outcomes if o.status == "skip"}
+    for rule_id in case.get("expect_skipped_rules", []):
+        assert rule_id in skipped

@@ -60,8 +60,11 @@ print(r.summary())
 # Verdict: FAIL - statements do not tie out
 ```
 
-Real statements tie out. Apple FY2024 from the 10-K is shown below; the
-validation suite checks Tesla FY2024 and NVIDIA FY2025 the same way:
+Real statements tie out. Apple FY2024 from the 10-K is shown below. The
+validation suite checks six real companies (Apple, Tesla, NVIDIA, Microsoft,
+Amazon, Meta), each from a different angle: full line-item footing, a
+multi-period series, and subtotal-only data where section footing is skipped
+rather than failed.
 
 ```python
 s = fv.Statements(
