@@ -1,0 +1,155 @@
+{
+  "cases": [
+    {
+      "id": "consistent-two-period",
+      "description": "A hand-built two-period model where every invariant holds.",
+      "source": "Hand-built from the accounting identities.",
+      "periods": ["FY2023", "FY2024"],
+      "income_statement": {
+        "FY2024": {
+          "revenue": 1000, "cogs": 600, "gross_profit": 400,
+          "operating_expenses": 250, "operating_income": 150,
+          "interest_expense": 20, "pretax_income": 130, "tax": 30,
+          "net_income": 100, "depreciation_amortization": 50
+        }
+      },
+      "balance_sheet": {
+        "FY2023": {
+          "cash": 50, "accounts_receivable": 60, "inventory": 40,
+          "total_current_assets": 150, "ppe_net": 300,
+          "total_non_current_assets": 300, "total_assets": 450,
+          "accounts_payable": 30, "total_current_liabilities": 30,
+          "long_term_debt": 100, "total_non_current_liabilities": 100,
+          "total_liabilities": 130, "common_stock": 100,
+          "retained_earnings": 220, "total_equity": 320
+        },
+        "FY2024": {
+          "cash": 93, "accounts_receivable": 70, "inventory": 45,
+          "total_current_assets": 208, "ppe_net": 330,
+          "total_non_current_assets": 330, "total_assets": 538,
+          "accounts_payable": 38, "total_current_liabilities": 38,
+          "long_term_debt": 120, "total_non_current_liabilities": 120,
+          "total_liabilities": 158, "common_stock": 100,
+          "retained_earnings": 280, "total_equity": 380
+        }
+      },
+      "cash_flow": {
+        "FY2024": {
+          "net_income": 100, "depreciation_amortization": 50,
+          "change_in_accounts_receivable": -10, "change_in_inventory": -5,
+          "change_in_accounts_payable": 8, "cfo": 143,
+          "capex": -80, "cfi": -80,
+          "debt_issued": 20, "dividends_paid": -40, "cff": -20,
+          "net_change_in_cash": 43, "beginning_cash": 50, "ending_cash": 93
+        }
+      },
+      "expect_ok": true,
+      "expect_failed_rules": []
+    },
+    {
+      "id": "apple-fy2024",
+      "description": "Apple Inc. FY2024 income statement and balance sheet (USD millions). Real published statements articulate, so finvariant passes them.",
+      "source": "Apple Inc. Form 10-K, fiscal year ended September 28, 2024.",
+      "periods": ["FY2024"],
+      "income_statement": {
+        "FY2024": {
+          "revenue": 391035, "cogs": 210352, "gross_profit": 180683,
+          "operating_expenses": 57467, "operating_income": 123216,
+          "other_income": 269, "pretax_income": 123485, "tax": 29749,
+          "net_income": 93736
+        }
+      },
+      "balance_sheet": {
+        "FY2024": {
+          "cash": 29943, "short_term_investments": 35228,
+          "accounts_receivable": 33410, "inventory": 7286,
+          "other_current_assets": 47120, "total_current_assets": 152987,
+          "long_term_investments": 91479, "ppe_net": 45680,
+          "other_non_current_assets": 74834, "total_non_current_assets": 211993,
+          "total_assets": 364980,
+          "accounts_payable": 68960, "short_term_debt": 9967,
+          "current_portion_long_term_debt": 10912, "deferred_revenue": 8249,
+          "other_current_liabilities": 78304, "total_current_liabilities": 176392,
+          "long_term_debt": 85750, "other_non_current_liabilities": 45888,
+          "total_non_current_liabilities": 131638, "total_liabilities": 308030,
+          "common_stock": 83276, "retained_earnings": -19154,
+          "accumulated_oci": -7172, "total_equity": 56950
+        }
+      },
+      "cash_flow": {},
+      "expect_ok": true,
+      "expect_failed_rules": []
+    },
+    {
+      "id": "broken-accounting-equation",
+      "description": "Assets do not equal liabilities plus equity.",
+      "source": "Hand-built negative case.",
+      "periods": ["FY2024"],
+      "income_statement": {},
+      "balance_sheet": {
+        "FY2024": {"total_assets": 540, "total_liabilities": 158, "total_equity": 380}
+      },
+      "cash_flow": {},
+      "expect_ok": false,
+      "expect_failed_rules": ["EQ.accounting_equation"]
+    },
+    {
+      "id": "broken-cash-ending-tie",
+      "description": "Cash flow ending cash does not match the balance sheet cash.",
+      "source": "Hand-built negative case.",
+      "periods": ["FY2024"],
+      "income_statement": {},
+      "balance_sheet": {"FY2024": {"cash": 90}},
+      "cash_flow": {"FY2024": {"ending_cash": 93}},
+      "expect_ok": false,
+      "expect_failed_rules": ["CASH.ending_ties"]
+    },
+    {
+      "id": "broken-cash-flow-net-change",
+      "description": "Net change in cash does not equal cfo + cfi + cff.",
+      "source": "Hand-built negative case.",
+      "periods": ["FY2024"],
+      "income_statement": {},
+      "balance_sheet": {},
+      "cash_flow": {"FY2024": {"cfo": 143, "cfi": -80, "cff": -20, "net_change_in_cash": 50}},
+      "expect_ok": false,
+      "expect_failed_rules": ["FOOT.cf.net_change"]
+    },
+    {
+      "id": "broken-retained-earnings",
+      "description": "Retained earnings do not roll forward by net income less dividends.",
+      "source": "Hand-built negative case.",
+      "periods": ["FY2023", "FY2024"],
+      "income_statement": {"FY2024": {"net_income": 100}},
+      "balance_sheet": {
+        "FY2023": {"retained_earnings": 220},
+        "FY2024": {"retained_earnings": 300}
+      },
+      "cash_flow": {"FY2024": {"dividends_paid": -40}},
+      "expect_ok": false,
+      "expect_failed_rules": ["ART.retained_earnings"]
+    },
+    {
+      "id": "broken-income-statement-footing",
+      "description": "Gross profit does not equal revenue minus cogs.",
+      "source": "Hand-built negative case.",
+      "periods": ["FY2024"],
+      "income_statement": {"FY2024": {"revenue": 1000, "cogs": 600, "gross_profit": 390}},
+      "balance_sheet": {},
+      "cash_flow": {},
+      "expect_ok": false,
+      "expect_failed_rules": ["FOOT.is.gross_profit"]
+    },
+    {
+      "id": "broken-operating-cash-flow-footing",
+      "description": "Operating cash flow does not equal the sum of its line items.",
+      "source": "Hand-built negative case.",
+      "periods": ["FY2024"],
+      "income_statement": {},
+      "balance_sheet": {},
+      "cash_flow": {"FY2024": {"net_income": 100, "depreciation_amortization": 50, "cfo": 140}},
+      "expect_ok": false,
+      "expect_failed_rules": ["FOOT.cf.cfo"]
+    }
+  ]
+}

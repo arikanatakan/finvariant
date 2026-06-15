@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finvariant"
+version = "0.1.0"
+description = "Deterministic integrity checks for financial statements: does the balance sheet balance, does the cash flow tie out, do the three statements articulate. Verifies, does not parse or build."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Atakan Arikan" }]
+requires-python = ">=3.10"
+dependencies = []
+keywords = [
+    "accounting", "financial-statements", "audit", "tie-out", "integrity",
+    "balance-sheet", "income-statement", "cash-flow", "three-statement-model",
+    "financial-modeling",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Accounting",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff", "build"]
+
+[project.urls]
+Homepage = "https://github.com/arikanatakan/finvariant"
+Repository = "https://github.com/arikanatakan/finvariant"
+Issues = "https://github.com/arikanatakan/finvariant/issues"
+
+[tool.setuptools.packages.find]
+include = ["finvariant*"]
+
+[tool.setuptools.package-data]
+finvariant = ["py.typed"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

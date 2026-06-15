@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use finvariant in your work, please cite it as below."
+title: finvariant
+abstract: >-
+  Deterministic integrity checks for financial statements: footing, the
+  accounting equation, cash-flow tie-outs and three-statement articulation.
+  Verifies a set of statements or a model rather than parsing or building them.
+type: software
+authors:
+  - family-names: Arikan
+    given-names: Atakan
+version: 0.1.0
+date-released: 2026-06-15
+license: MIT
+repository-code: "https://github.com/arikanatakan/finvariant"
+url: "https://github.com/arikanatakan/finvariant"
+keywords:
+  - accounting
+  - financial-statements
+  - audit
+  - tie-out
+  - integrity
+  - three-statement-model
+  - financial-modeling
