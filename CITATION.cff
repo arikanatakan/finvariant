@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use finvariant in your work, please cite it as below."
-title: finvariant
+title: "finvariant: deterministic integrity checks for financial statements"
 abstract: >-
   Deterministic integrity checks for financial statements: footing, the
   accounting equation, cash-flow tie-outs and three-statement articulation.

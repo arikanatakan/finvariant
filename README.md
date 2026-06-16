@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/arikanatakan/finvariant/actions/workflows/ci.yml/badge.svg)](https://github.com/arikanatakan/finvariant/actions/workflows/ci.yml)
 [![PyPI](https://img.shields.io/pypi/v/finvariant?v=2)](https://pypi.org/project/finvariant/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Deterministic integrity checks for financial statements.
 
