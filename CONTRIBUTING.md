@@ -14,10 +14,11 @@ python -m pip install -e ".[dev]"
 
 ```
 ruff check .
+mypy finvariant
 pytest
 ```
 
-Both must pass. A new invariant should come with cases in `tests/cases/` (one
+All three must pass. A new invariant should come with cases in `tests/cases/` (one
 JSON file per case): a consistent example that passes and an isolated breakage
 that the new rule, and only that rule, catches. Each file should explain what it
 demonstrates in its "description". Reference numbers taken from real statements

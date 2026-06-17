@@ -160,6 +160,8 @@ def _articulation(out, cur, prev, period, at, rt) -> None:
     ni = isd.get("net_income", cf.get("net_income"))
     if (prev is not None and "retained_earnings" in bs
             and "retained_earnings" in prev["bs"] and ni is not None):
+        # dividends_paid follows the cash-flow sign convention (an outflow is
+        # negative), so it is added, not subtracted: a negative value reduces RE.
         dividends = cf.get("dividends_paid", 0.0)
         expected = prev["bs"]["retained_earnings"] + ni + dividends
         out.append(_check("ART.retained_earnings",

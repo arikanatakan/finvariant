@@ -113,11 +113,14 @@ contract and are append-only from here.
 ## Known limitations
 
 The retained-earnings roll-forward checks `retained earnings = prior + net
-income - dividends`. It does not yet model share buybacks charged to retained
-earnings, which several large companies do (Microsoft, for example). For those,
-supply the balance sheet without the retained-earnings line so the roll-forward
-is skipped rather than falsely failed; a full equity roll-forward is planned for
-0.2.
+income - dividends`, taking dividends from `dividends_paid` in the cash flow.
+Cash-flow line items follow the statement's own sign convention, so an outflow
+such as `dividends_paid` is negative, and the check adds that signed figure (a
+negative value reduces retained earnings). It does not yet model share buybacks
+charged to retained earnings, which several large companies do (Microsoft, for
+example). For those, supply the balance sheet without the retained-earnings line
+so the roll-forward is skipped rather than falsely failed; a full equity
+roll-forward is planned for 0.2.
 
 Footing compares a subtotal to the line items you supply, so give a section's
 items in full or not at all: a partial section is reported as not footing.
@@ -127,12 +130,17 @@ items in full or not at all: a partial section is reported as not footing.
 | Version | Scope |
 |---------|-------|
 | 0.2 | roll-forward checks (PP&E = opening + capex - depreciation - disposals; debt; equity); working-capital changes reconciled to operating cash flow |
-| 0.3 | an MCP server so an agent can verify financial statements it reads or generates |
-| 0.4 | optional readers to map common export formats into the canonical schema |
+| 0.3 | optional readers to map common export formats into the canonical schema |
 
 Out of scope: retrieving statements (see financetoolkit, the SEC tools),
 building or forecasting models, ratio analysis, consolidation and currency
 translation.
+
+## Related
+
+[finvariant-mcp](https://github.com/arikanatakan/finvariant-mcp) exposes these
+integrity checks to AI agents over the Model Context Protocol, so an agent can
+verify statements it reads or generates instead of doing the arithmetic itself.
 
 ## References
 
