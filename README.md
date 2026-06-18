@@ -63,9 +63,12 @@ print(r.summary())
 ```
 
 Real statements tie out. Apple FY2024 from the 10-K is shown below. The
-validation suite checks six real companies (Apple, Tesla, NVIDIA, Microsoft,
-Amazon, Meta), ranging from full line-item footing to subtotal-only data, where
-a check whose inputs are missing is skipped rather than failed.
+validation suite checks seven real companies (Apple, Tesla, NVIDIA, Microsoft,
+Amazon, Meta, Johnson & Johnson), ranging from full line-item footing to
+subtotal-only data, where a check whose inputs are missing is skipped rather
+than failed. Johnson & Johnson FY2024 is the first with a full, articulating
+cash flow, so the cash-flow and articulation checks run on it too, and all
+three statements tie out.
 
 ```python
 s = fv.Statements(
@@ -159,6 +162,7 @@ equation). All filings are on [SEC EDGAR](https://www.sec.gov/edgar).
 | Microsoft Corporation | Form 10-K | June 30, 2024 and June 30, 2023 |
 | Amazon.com, Inc. | Form 10-K | December 31, 2024 |
 | Meta Platforms, Inc. | Form 10-K | December 31, 2024 |
+| Johnson & Johnson | Form 10-K | December 29, 2024 |
 
 ### Method
 

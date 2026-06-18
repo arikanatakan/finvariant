@@ -1,0 +1,84 @@
+{
+  "id": "johnson-johnson-fy2024",
+  "description": "Johnson & Johnson FY2024 income statement, balance sheet and cash flow (USD millions). The first real-company case with a full, articulating cash flow: all three statements tie out, so finvariant passes them. It exercises the cash-flow checks that the income-statement/balance-sheet cases cannot: operating, investing and financing activities each foot, the net change in cash equals cfo + cfi + cff + fx, the cash flow's ending cash ties to the balance-sheet cash, and net income agrees between the income statement and the cash flow. Healthcare sector, post-Kenvue separation.",
+  "source": "Johnson & Johnson Form 10-K, fiscal year ended December 29, 2024.",
+  "periods": [
+    "FY2024"
+  ],
+  "income_statement": {
+    "FY2024": {
+      "revenue": 88821,
+      "cogs": 27471,
+      "gross_profit": 61350,
+      "operating_expenses": 40546,
+      "operating_income": 20804,
+      "other_income": -3362,
+      "interest_expense": 755,
+      "pretax_income": 16687,
+      "tax": 2621,
+      "net_income": 14066
+    }
+  },
+  "balance_sheet": {
+    "FY2024": {
+      "cash": 24105,
+      "short_term_investments": 417,
+      "accounts_receivable": 14842,
+      "inventory": 12444,
+      "other_current_assets": 4085,
+      "total_current_assets": 55893,
+      "ppe_net": 20518,
+      "goodwill": 44200,
+      "intangible_assets": 37618,
+      "other_non_current_assets": 21875,
+      "total_non_current_assets": 124211,
+      "total_assets": 180104,
+      "accounts_payable": 10311,
+      "accrued_liabilities": 34027,
+      "short_term_debt": 5983,
+      "total_current_liabilities": 50321,
+      "long_term_debt": 30651,
+      "other_non_current_liabilities": 27642,
+      "total_non_current_liabilities": 58293,
+      "total_liabilities": 108614,
+      "common_stock": 3120,
+      "retained_earnings": 155791,
+      "treasury_stock": -75680,
+      "accumulated_oci": -11741,
+      "total_equity": 71490
+    }
+  },
+  "cash_flow": {
+    "FY2024": {
+      "net_income": 14066,
+      "depreciation_amortization": 7339,
+      "stock_based_compensation": 1176,
+      "change_in_accounts_receivable": -406,
+      "change_in_inventory": -1128,
+      "change_in_accounts_payable": 1621,
+      "change_in_working_capital": 1750,
+      "other_operating": -152,
+      "cfo": 24266,
+      "capex": -4424,
+      "acquisitions": -15146,
+      "divestitures": 675,
+      "purchases_of_investments": -1726,
+      "sales_of_investments": 2462,
+      "other_investing": -440,
+      "cfi": -18599,
+      "debt_issued": 21937,
+      "debt_repaid": -10916,
+      "equity_issued": 838,
+      "share_buybacks": -2432,
+      "dividends_paid": -11823,
+      "other_financing": -736,
+      "cff": -3132,
+      "fx_effect": -289,
+      "net_change_in_cash": 2246,
+      "beginning_cash": 21859,
+      "ending_cash": 24105
+    }
+  },
+  "expect_ok": true,
+  "expect_failed_rules": []
+}

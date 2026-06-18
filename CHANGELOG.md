@@ -4,6 +4,15 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/), and the project uses
 [semantic versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+
+- Validation case: Johnson & Johnson FY2024, the first real-company case with a
+  full, articulating cash flow. All three statements tie out, so the cash-flow
+  footing, net-change identity, cash tie-out and net-income articulation checks
+  run on real data (19 checks, all passing). Healthcare sector.
+
 ## [0.1.0] - 2026-06-15
 
 First release.

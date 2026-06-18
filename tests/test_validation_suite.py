@@ -1,6 +1,6 @@
 """Run finvariant against every case in tests/cases/.
 
-Each case is its own JSON file: a hand-built consistent model, six real
+Each case is its own JSON file: a hand-built consistent model, seven real
 companies (each illustrating a different angle), and one isolated breakage per
 invariant. Each file documents what it demonstrates in its "description".
 """
@@ -40,4 +40,4 @@ def test_case(path):
 
 
 def test_cases_exist():
-    assert len(CASE_FILES) >= 13
+    assert len(CASE_FILES) >= 14
